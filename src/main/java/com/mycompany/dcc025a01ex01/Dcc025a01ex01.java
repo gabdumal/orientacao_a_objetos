@@ -5,6 +5,8 @@
 
 package com.mycompany.dcc025a01ex01;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ice
@@ -12,6 +14,9 @@ package com.mycompany.dcc025a01ex01;
 public class Dcc025a01ex01 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Digite um valor em centavos: ");
+        Scanner teclado = new Scanner(System.in);
+        int valorTotal = teclado.nextInt();
+        System.out.println(valorTotal);
     }
 }
