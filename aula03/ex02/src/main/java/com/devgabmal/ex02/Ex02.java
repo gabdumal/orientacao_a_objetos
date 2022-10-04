@@ -40,8 +40,9 @@ public class Ex02 {
             do {
                 System.out.print("Deseja analisar outro numero? [Y/n] ");
                 cmd = teclado.nextLine();
-            } while (cmd != "Y" && cmd != "y" && cmd != "N" && cmd != "n");
+            } while (!(cmd.contentEquals("Y") || cmd.contentEquals("y") || cmd.contentEquals("N") || cmd.contentEquals("n")));
 
-        } while (cmd == "Y" && cmd == "y");
+            divisores = "";
+        } while (cmd.contentEquals("Y") || cmd.contentEquals("y"));
     }
 }
