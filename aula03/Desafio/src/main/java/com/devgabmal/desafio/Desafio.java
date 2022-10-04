@@ -14,7 +14,7 @@ public class Desafio {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame();
-        DrawPanel panel = new DrawPanel();
+        DrawPanelImproved panel = new DrawPanelImproved();
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 500);

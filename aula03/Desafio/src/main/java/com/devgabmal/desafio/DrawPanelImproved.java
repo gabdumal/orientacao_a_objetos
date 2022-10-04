@@ -11,14 +11,25 @@ import javax.swing.JPanel;
  *
  * @author cgmal
  */
-public class DrawPanel extends JPanel {
+public class DrawPanelImproved extends JPanel {
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         int width = getWidth();
         int height = getHeight();
-        g.drawLine(0, 0, width, height);
-        g.drawLine(0, height, width, 0);
+
+        double slices = 15;
+        int x1, x2, y1, y2;
+        double sliceWidth = width / slices;
+        double sliceHeight = height / slices;
+
+        for (int i = 0; i < slices; i++) {
+            x1 = 0;
+            y1 = (int) (i * sliceHeight);
+            x2 = (int) (i * sliceWidth);
+            y2 = (int) (height);
+            g.drawLine(x1, y1, x2, y2);
+        }
     }
 }
