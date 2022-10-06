@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
-package com.devgabmal.ex02;
+package com.devgabmal.exm02;
 
 import javax.swing.JOptionPane;
 
@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author ice
  */
-public class Ex02 {
+public class Exm02 {
 
     public static void main(String[] args) {
         int num1 = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o 1º número:"));
