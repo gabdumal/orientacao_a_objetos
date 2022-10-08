@@ -15,9 +15,8 @@ public class Ex05 {
     public static double calculaInvestimento(double investimentoPorMes, double taxaMensal) {
         double resultado = investimentoPorMes;
 
-        for (int mes = 12; mes > 0; mes--) {
-            double montante = resultado * (taxaMensal + 1) * mes;
-            resultado += montante - investimentoPorMes * mes;
+        for (int mes = 11; mes > 0; mes--) {
+            resultado += investimentoPorMes + resultado * taxaMensal;
         }
 
         return resultado;
@@ -32,8 +31,11 @@ public class Ex05 {
         System.out.print("  Quanto será investido por mês? ");
         investimentoPorMes = Double.parseDouble(teclado.nextLine());
         System.out.print("  Qual será a taxa de juros mensal? ");
-        taxaMensal = Double.parseDouble(teclado.nextLine().replace("%", "")) / (double) 100;
+        taxaMensal = Double.parseDouble(teclado.nextLine().replace("%", ""))
+                / (double) 100;
 
-        System.out.print("\n  Saldo do investimento após 1 ano: " + calculaInvestimento(investimentoPorMes, taxaMensal));
+        System.out.println(
+                "\n  Saldo do investimento após 1 ano: " +
+                        calculaInvestimento(investimentoPorMes, taxaMensal));
     }
 }
